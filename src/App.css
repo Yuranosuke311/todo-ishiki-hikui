@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafaf8;
+  font-family: 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+
+/* ── Header ── */
+.app-header {
+  text-align: center;
+  padding: 40px 0 24px;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── Sections ── */
+.achievement-section,
+.todo-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.achievement-section h2,
+.todo-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1a1a1a;
+}
+
+/* ── Achievements ── */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.achievement-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.achievement-btn.checked {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.achievement-btn:hover {
+  border-color: #a3a3a3;
+}
+
+.check-mark {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.smartphone-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.smartphone-row input {
+  width: 60px;
+  padding: 6px 10px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.smartphone-score {
+  color: #888;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.achievement-comment {
+  color: #6b7280;
+  font-size: 13px;
+  text-align: right;
+  font-style: italic;
+}
+
+.praise-toast {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #92400e;
+  text-align: center;
+}
+
+/* ── Add Form ── */
+.add-form {
+  margin-bottom: 16px;
+}
+
+.add-form input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.add-form input[type="text"]:focus {
+  border-color: #a78bfa;
+}
+
+.add-options {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.add-options select {
+  padding: 8px 12px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn-add {
+  padding: 8px 20px;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-add:hover {
+  background: #6d28d9;
+}
+
+/* ── Confirm Dialog ── */
+.confirm-dialog {
+  background: #fef3c7;
+  border: 2px solid #fde68a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.confirm-dialog p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-yes {
+  padding: 8px 18px;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-no {
+  padding: 8px 18px;
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── Tsukkomi ── */
+.tsukkomi-banner {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #991b1b;
+}
+
+/* ── Todo Items ── */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  border: 2px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.todo-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.priority-badge {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.deadline-badge {
+  font-size: 12px;
+  color: #6b7280;
+  padding: 3px 8px;
+  background: #f3f4f6;
+  border-radius: 20px;
+}
+
+.todo-text {
+  font-size: 16px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-done {
+  padding: 7px 14px;
+  background: #86efac;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-skip {
+  padding: 7px 14px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-giveup {
+  padding: 7px 14px;
+  background: #fecaca;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── Done / Skipped ── */
+.done-section,
+.skipped-section {
+  margin-top: 20px;
+}
+
+.done-section h3,
+.skipped-section h3 {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.todo-done,
+.todo-skipped {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.todo-done {
+  background: #f0fdf4;
+  color: #166534;
+  text-decoration: line-through;
+}
+
+.todo-skipped {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #9ca3af;
+  cursor: pointer;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.empty-message {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+  padding: 24px 0;
+}
