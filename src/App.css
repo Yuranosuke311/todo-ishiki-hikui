@@ -31,9 +31,16 @@ body {
   margin-bottom: 6px;
 }
 
+.tagline {
+  color: #555;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
 .subtitle {
-  color: #888;
-  font-size: 14px;
+  color: #aaa;
+  font-size: 13px;
 }
 
 /* ── Sections ── */
@@ -371,4 +378,24 @@ body {
   color: #9ca3af;
   font-size: 14px;
   padding: 24px 0;
+}
+
+.btn-share {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-share:hover {
+  background: #333;
 }

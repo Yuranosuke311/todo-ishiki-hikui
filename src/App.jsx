@@ -17,6 +17,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <h1>📋 意識低い系 ToDoリスト</h1>
+        <p className="tagline">がんばれない日のための、ゆるいToDoアプリ</p>
         <p className="subtitle">できたらいいな、くらいでいいよ</p>
       </header>
       <main className="app-main">

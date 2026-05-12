@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fafaf8"/>
+  <rect x="60" y="60" width="1080" height="510" rx="24" fill="#ffffff" stroke="#e8e8e8" stroke-width="2"/>
+
+  <!-- emoji -->
+  <text x="600" y="220" font-size="96" text-anchor="middle">📋</text>
+
+  <!-- title -->
+  <text x="600" y="320" font-family="sans-serif" font-size="52" font-weight="bold" fill="#1a1a1a" text-anchor="middle">意識低い系 ToDoリスト</text>
+
+  <!-- tagline -->
+  <text x="600" y="390" font-family="sans-serif" font-size="28" fill="#555" text-anchor="middle">がんばれない日のための、ゆるいToDoアプリ</text>
+
+  <!-- subtitle -->
+  <text x="600" y="445" font-family="sans-serif" font-size="22" fill="#aaa" text-anchor="middle">できたらいいな、くらいでいいよ</text>
+
+  <!-- badges -->
+  <rect x="310" y="490" width="180" height="44" rx="22" fill="#f0fdf4"/>
+  <text x="400" y="518" font-family="sans-serif" font-size="18" fill="#166534" text-anchor="middle">✅ 起きれた</text>
+
+  <rect x="510" y="490" width="180" height="44" rx="22" fill="#fef3c7"/>
+  <text x="600" y="518" font-family="sans-serif" font-size="18" fill="#92400e" text-anchor="middle">💤 やめとく</text>
+
+  <rect x="710" y="490" width="180" height="44" rx="22" fill="#fee2e2"/>
+  <text x="800" y="518" font-family="sans-serif" font-size="18" fill="#991b1b" text-anchor="middle">😔 やっぱ無理</text>
+</svg>

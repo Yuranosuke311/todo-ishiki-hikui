@@ -81,6 +81,28 @@ export default function AchievementSection() {
           {checkedCount}個もできてる、すごいじゃん（小声）
         </p>
       )}
+
+      {checkedCount >= 1 && (
+        <button className="btn-share" onClick={() => handleShare(checked, smartphoneHours, smartphoneScore)}>
+          𝕏 今日のえらかったことをシェア
+        </button>
+      )}
     </section>
   )
+}
+
+function handleShare(checked, smartphoneHours, smartphoneScore) {
+  const labels = ACHIEVEMENTS.filter(a => checked[a.id]).map(a => `・${a.label}`)
+  const phoneText = smartphoneHours
+    ? `\n📱 スマホ時間: ${smartphoneHours}時間（${smartphoneScore}）`
+    : ''
+  const text = [
+    '今日のえらかったこと ✅',
+    ...labels,
+    phoneText,
+    '',
+    '#意識低い系ToDoリスト',
+    'がんばれない日のための、ゆるいToDoアプリ',
+  ].join('\n')
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank')
 }
